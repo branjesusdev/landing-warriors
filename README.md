@@ -1,3 +1,5 @@
+
+
 # Astro Starter Kit: Minimal
 
 ```
@@ -10,9 +12,28 @@ npm create astro@latest -- --template minimal
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🚀 Project Structure
+## ⚙️ Stack
 
-Inside of your Astro project, you'll see the following folders and files:
+➡️ [**Tailwindcss**](https://tailwindcss.com/) : pnpm astro add tailwind
+➡️ [**eslint**](https://eslint.org/)
+➡️ [**eslint**](https://eslint.org/)
+
+## 🚀 Getting Started
+
+1. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+ultra install
+```
+
+## 📂 Project Structure
+
 
 ```
 /
