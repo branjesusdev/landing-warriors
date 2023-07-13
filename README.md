@@ -10,13 +10,12 @@ npm create astro@latest -- --template minimal
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> 🧑‍🚀 **Un Versus?** Selecciona su personaje!
 
 ## ⚙️ Stack
 
 ➡️ [**Tailwindcss**](https://tailwindcss.com/) : pnpm astro add tailwind
-➡️ [**eslint**](https://eslint.org/)
-➡️ [**eslint**](https://eslint.org/)
+➡️ [**Astro.Build**](https://astro.build/)
 
 ## 🚀 Getting Started
 
