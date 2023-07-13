@@ -1,6 +1,6 @@
 ![Landig Mortal Combat](/public/SEO_PAGE.png)
 
-> 🔗 [**Sitio WEB:**](https://landing-warriors.netlify.app/) {:target="_blank"}
+> 🔗 [**Sitio WEB:**](https://landing-warriors.netlify.app/) {target="_blank"}
 
 # Astro Starter Kit: Minimal
 
