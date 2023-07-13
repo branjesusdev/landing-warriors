@@ -1,4 +1,4 @@
-![Landig Mortal Combat](/public/SEO.png)
+![Landig Mortal Combat](/public/SEO_PAGE.png)
 
 # Astro Starter Kit: Minimal
 

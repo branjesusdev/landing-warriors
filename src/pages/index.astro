@@ -1,150 +1,84 @@
 ---
-import Logo from './Logo.astro'
+import Layout from '../Layouts/Layout.astro'
+import Header from '../components/Header.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="theme-color" media="(prefers-color-scheme: light)" content="cyan" />
-		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
-		<title>Mortal Kombat</title>
-		<link rel="preload" href="/fonts/boxing.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-	</head>
-	<body>
-		<header class="relative">
-			<aside class="absolute left-1/2 -translate-x-1/2">
+<Layout title='Motal Combat'>
+	<Header></Header>
+	<main>
+		<section
+			id="warriors"
+			class={`flex justify-between relative
+				[&>aside>img]:absolute [&>aside>img]:bottom-0
+				[&>aside>img]:w-auto
+				h-[40vh] md:h-[50vh] lg:h-[65vh] xl:h-[80vh] 2xl:h-screen pt-24 px-2 border-b border-white/10 overflow-hidden
+				select-none`}>
+				
+			<aside class="relative w-full ">
 				<img 
-					id="logo"
-					src="/warriors/logo.avif" 
-					alt="LOGO" 
-					class="w-32 h-auto lg:w-64 animate-jump-in animate-duration-1000 animate-ease-in-out animate-delay-[1500ms]"
-					width="498"
-					height="303"
-					fetchpriority="high"
-				>
-
-			
+					class="z-50 left-0 h-[95%] animate-duration-500 animate-fade-right filter-" 
+					src="/warriors/left/JOHNNY.avif" 
+					alt="JOHNNY" 
+					sizes="(max-width: 767px) 767px, 100vw"
+					fetchpriority="high">
+	
+				<img 
+					class="z-40 left-[18%] h-[90%] animate-duration-700 animate-fade-right animate-delay-200" 
+					src="/warriors/left/FUJIN.avif"
+					sizes="(max-width: 767px) 767px, 100vw"
+					alt="FUJIN">
+	
+				<img 
+					class="z-30 left-[12%] h-[85%] animate-duration-[1500ms] animate-fade-right animate-delay-[400ms] " 
+					src="/warriors/left/GERAS.avif" 
+					sizes="(max-width: 767px) 767px, 100vw"
+					alt="GERAS">
+	
+				<img 
+					class="z-20 left-[28%] h-[80%] animate-duration-[1400ms] animate-fade-right animate-delay-[800ms]" 
+					src="/warriors/left/ERRON-BLACK.avif" 
+					sizes="(max-width: 767px) 767px, 100vw"
+					alt="ERRON BLACK">
+	
+				<img 
+					class="z-10 left-[50%] h-[70%] animate-duration-[1800ms] animate-fade-right animate-delay-[1000ms]" 
+					src="/warriors/left/SKARLET.avif" 
+					sizes="(max-width: 767px) 767px, 100vw"
+					alt="SKARLET">
+	
 			</aside>
+			<aside class="relative w-full">
+				<img 
+					class="z-50 right-0 h-[95%] animate-duration-300 animate-fade-left" 
+					src="/warriors/right/GUASON.avif" 
+					alt="EL GUASÓN" 
+					sizes="(max-width: 767px) 767px, 100vw"
+					fetchpriority="high">
+				<img 
+					class="z-40 right-[7%] h-[90%] animate-duration-500 animate-fade-left animate-delay-200" 
+					src="/warriors/right/KOTAL.avif" 
+					sizes="(max-width: 767px) 767px, 100vw"
+					alt="KOTAL">
+				<img 
+					class="z-30 right-[30%] h-[85%] animate-duration-700 animate-fade-left animate-delay-[400ms]" 
+					src="/warriors/right/ROBOCOP.avif" 
+					sizes="(max-width: 767px) 767px, 100vw"
+					alt="ROBOCOP">
+				<img 
+					class="z-20 right-[35%] h-[80%] animate-duration-[1300ms] animate-fade-left animate-delay-[800ms]" 
+					src="/warriors/right/KANO.avif" 
+					sizes="(max-width: 767px) 767px, 100vw"
+					alt="KANO">
+				<img 
+					class="z-10 right-[55%] h-[70%] animate-duration-1000 animate-fade-left animate-delay-[1200ms]" 
+					src="/warriors/right/D'VORAH.avif" 
+					sizes="(max-width: 767px) 767px, 100vw"
+					alt="D'VORAH">
+			</aside>
+		</section>
+	</main>
+</Layout>
 
-			<section 
-				id="versus"
-				class="fixed bottom-10 lg:bottom-auto lg:top-2 xl:top-3 2xl:top-3 z-[0] 
-					opacity-0 w-full gap-y-3 transition-opacity animate-delay-500 flex flex-col justify-center items-center">
-					<div class="w-full md:w-[30vh] bg-white text-center py-3 rounded-sm drop-shadow-md">
-						<h2 class="text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-boxing inline-block text-black">
-							
-						</h2>
-					</div>
-				<h1 
-					class="text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl  font-boxing inline-block bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-red-600 leading-relaxed
-					drop-shadow-[0_0_5px_rgba(242,150,39,.6)]">
-					VS
-				</h1>
-				<div class="w-full md:w-[30vh] bg-black text-center py-3 rounded-sm drop-shadow-md">
-					<h2 class="text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-boxing inline-block text-white">
-						
-					</h2>
-				</div>
-			</section>
-		</header>
-
-		<main>
-			<section
-				id="warriors"
-				class={`flex justify-between relative
-					[&>aside>img]:absolute [&>aside>img]:bottom-0
-					[&>aside>img]:w-auto
-					h-[40vh] md:h-[50vh] lg:h-[65vh] xl:h-[80vh] 2xl:h-screen pt-24 px-2 border-b border-white/10 overflow-hidden
-					select-none`}>
-					
-				<aside class="relative w-full ">
-					<img 
-						class="z-50 left-0 h-[95%] animate-duration-500 animate-fade-right filter-" 
-						src="/warriors/left/JOHNNY.avif" 
-						alt="JOHNNY" 
-						sizes="(max-width: 767px) 767px, 100vw"
-						fetchpriority="high">
-
-					<img 
-						class="z-40 left-[18%] h-[90%] animate-duration-700 animate-fade-right animate-delay-200" 
-						src="/warriors/left/FUJIN.avif"
-						sizes="(max-width: 767px) 767px, 100vw"
-						alt="FUJIN">
-
-					<img 
-						class="z-30 left-[12%] h-[85%] animate-duration-[1500ms] animate-fade-right animate-delay-[400ms] " 
-						src="/warriors/left/GERAS.avif" 
-						sizes="(max-width: 767px) 767px, 100vw"
-						alt="GERAS">
-
-					<img 
-						class="z-20 left-[28%] h-[80%] animate-duration-[1400ms] animate-fade-right animate-delay-[800ms]" 
-						src="/warriors/left/ERRON-BLACK.avif" 
-						sizes="(max-width: 767px) 767px, 100vw"
-						alt="ERRON BLACK">
-
-					<img 
-						class="z-10 left-[50%] h-[70%] animate-duration-[1800ms] animate-fade-right animate-delay-[1000ms]" 
-						src="/warriors/left/SKARLET.avif" 
-						sizes="(max-width: 767px) 767px, 100vw"
-						alt="SKARLET">
-
-				</aside>
-				<aside class="relative w-full">
-					<img 
-						class="z-50 right-0 h-[95%] animate-duration-300 animate-fade-left" 
-						src="/warriors/right/GUASON.avif" 
-						alt="EL GUASÓN" 
-						sizes="(max-width: 767px) 767px, 100vw"
-						fetchpriority="high">
-					<img 
-						class="z-40 right-[7%] h-[90%] animate-duration-500 animate-fade-left animate-delay-200" 
-						src="/warriors/right/KOTAL.avif" 
-						sizes="(max-width: 767px) 767px, 100vw"
-						alt="KOTAL">
-					<img 
-						class="z-30 right-[30%] h-[85%] animate-duration-700 animate-fade-left animate-delay-[400ms]" 
-						src="/warriors/right/ROBOCOP.avif" 
-						sizes="(max-width: 767px) 767px, 100vw"
-						alt="ROBOCOP">
-					<img 
-						class="z-20 right-[35%] h-[80%] animate-duration-[1300ms] animate-fade-left animate-delay-[800ms]" 
-						src="/warriors/right/KANO.avif" 
-						sizes="(max-width: 767px) 767px, 100vw"
-						alt="KANO">
-					<img 
-						class="z-10 right-[55%] h-[70%] animate-duration-1000 animate-fade-left animate-delay-[1200ms]" 
-						src="/warriors/right/D'VORAH.avif" 
-						sizes="(max-width: 767px) 767px, 100vw"
-						alt="D'VORAH">
-				</aside>
-			</section>
-			
-		</main>
-
-		<footer></footer>
-	</body>
-</html>
-
-<style is:global>
-	body {
-		background-color: #131313;
-		background: url(/warriors/roster-bg.webp) no-repeat center center fixed;
-		background-size: cover;
-	}
-	@font-face {
-      font-family: "Boxing";
-      font-weight: bold;
-      src: url(/fonts/boxing.woff2);
-	  font-display: swap;
-    }
-	h1, h2 {
-		font-family: 'Boxing';
-	}
-</style>
 
 <script defer>
 	const $warriors = document.querySelector('#warriors')
